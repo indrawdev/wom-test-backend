@@ -46,6 +46,11 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Customer');
     }
 
+    public function merchant()
+    {
+        return $this->hasOne('App\Models\Merchant');
+    }
+
     public function addresses()
     {
         return $this->belongsTo('App\Models\Address');

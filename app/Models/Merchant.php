@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Payment extends Model
+class Merchant extends Model
 {
     use HasFactory;
 
-    public function orders()
+    public function user()
     {
-        return $this->hasMany('App\Models\Order');
+        return $this->belongsTo('App\Models\User');
     }
 }

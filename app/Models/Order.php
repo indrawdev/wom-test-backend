@@ -14,9 +14,19 @@ class Order extends Model
         return $this->belongsTo('App\Models\User');
     }
 
+    public function payment()
+    {
+        return $this->belongsTo('App\Models\Payment');
+    }
+
     public function address()
     {
         return $this->belongsTo('App\Models\Address');
+    }
+
+    public function courier()
+    {
+        return $this->belongsTo('App\Models\Courier');
     }
 
     public function items()
